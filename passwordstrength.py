@@ -18,6 +18,8 @@ def password_strength(password):
         suggestion.append("Password should contain at least one number")
     if specialc<1:
         suggestion.append("Password should contain at least one special character")
+    if "password" in password.lowe():
+        suggestion.append("Password should not be 'Password'")
     for i in range(len(suggestion)):
         print(suggestion[i])
     if not suggestion:
